@@ -5,7 +5,7 @@ WORKDIR /app
 FROM microsoft/dotnet:2.2-sdk AS build
 WORKDIR /src
 COPY LoginAPIService.csproj LoginAPIService/
-RUN dotnet restore LoginAPIService.csproj
+RUN dotnet restore LoginAPIService/LoginAPIService.csproj
 COPY . .
 WORKDIR /src/LoginAPIService
 RUN dotnet build LoginAPIService.csproj -c Release -o /app
