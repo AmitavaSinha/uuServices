@@ -4,8 +4,8 @@ WORKDIR /app
 
 FROM microsoft/dotnet:2.2-sdk AS build
 WORKDIR /src
-COPY eFormProcessingService/eFormProcessingService.csproj eFormProcessingService/
-RUN dotnet restore eFormProcessingService/eFormProcessingService.csproj
+COPY eFormProcessingService.csproj eFormProcessingService/
+RUN dotnet restore eFormProcessingService.csproj
 COPY . .
 WORKDIR /src/eFormProcessingService
 RUN dotnet build eFormProcessingService.csproj -c Release -o /app
