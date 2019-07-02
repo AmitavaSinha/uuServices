@@ -5,13 +5,13 @@ services:
     image: eformprocessingservice:${buildid}
     build:
       context: .
-      dockerfile: Application/eFormProcessingService/Dockerfile
+      dockerfile: eFormProcessingService/Dockerfile
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
   loginapiservice:
     image: loginapiservice:${buildid}
     build:
       context: .
-      dockerfile: Application/LoginAPIService/Dockerfile
+      dockerfile: LoginAPIService/Dockerfile
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
